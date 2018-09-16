@@ -12,6 +12,7 @@ import Home from "./Home";
 import About from "./About";
 import Menu from "./Menu";
 import Contact from "./Contact";
+import woodFloor2 from "./imgs/woodFloor2.jpg";
 
 class App extends Component {
   render() {
@@ -40,6 +41,11 @@ class App extends Component {
               </nav>
             </header>
           </div>
+
+          <div className="header-background">
+            <img src={woodFloor2} />
+          </div>
+
           <div>
             <Switch>
               <Route exact path="/home" component={Home} />

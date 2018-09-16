@@ -129,6 +129,13 @@ ul.grid {
 .navWrapper {
 }
 
+.header-background {
+  display: flex;
+  height: 20vh;
+
+  object-fit: cover;
+}
+
 header {
   position: absolute;
   top: 0;
