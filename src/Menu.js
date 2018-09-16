@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
-class About extends Component {
+class Menu extends Component {
   render() {
     return (
       <div>
         <section>
-          <h1>About page</h1>
+          <h1>The menu goes here</h1>
+          <h3>Write soome other thing here about this thing.</h3>
         </section>
       </div>
     );
   }
 }
-export default About;
+export default Menu;

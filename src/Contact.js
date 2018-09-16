@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import LazyHero from "react-lazy-hero";
 class Contact extends Component {
   render() {
     return (
       <div>
-        <h1> This is a blank contact view component</h1>
+        <section>
+          <h1> contact page</h1>
+        </section>
       </div>
     );
   }

@@ -126,6 +126,8 @@ ul.grid {
 /*-------------
  	Header
 -------------*/
+.navWrapper {
+}
 
 header {
   position: absolute;
@@ -138,6 +140,7 @@ header {
   align-items: center;
   color: #fff;
   padding: 35px 100px 0;
+  min-height: 20vh;
 }
 
 header h2 {
@@ -176,70 +179,8 @@ header nav li:last-child {
   }
 }
 
-/*----------------
- 	Hero Section
-----------------*/
-
-.hero {
-  position: relative;
-  justify-content: center;
-  min-height: 100vh;
-  color: #fff;
-  text-align: center;
-}
-
-.hero .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-color: #2196f3;
-  z-index: -1;
-}
-
-.hero .background-image:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #414a4f;
-  opacity: 0.75;
-}
-
-.hero h1 {
-  font: bold 60px "Open Sans", sans-serif;
-  margin-bottom: 15px;
-}
-
-.hero h3 {
-  font: normal 28px "Open Sans", sans-serif;
-  margin-bottom: 40px;
-}
-
-.hero a.btn {
-  padding: 20px 46px;
-}
-
-@media (max-width: 800px) {
-  .hero {
-    min-height: 600px;
-  }
-
-  .hero h1 {
-    font-size: 48px;
-  }
-
-  .hero h3 {
-    font-size: 24px;
-  }
-
-  .hero a.btn {
-    padding: 15px 40px;
-  }
+.pageTopper {
+  display: flex;
 }
 
 /*--------------------
@@ -273,90 +214,6 @@ header nav li:last-child {
   .our-work .grid li.small,
   .our-work .grid li.large {
     flex-basis: 100%;
-  }
-}
-
-/*----------------------
- 	Features Section
-----------------------*/
-
-.features {
-  background-color: #f7f7f7;
-}
-
-.features .grid li {
-  padding: 0 30px;
-  flex-basis: 33%;
-  text-align: center;
-}
-
-.features .grid li i {
-  font-size: 50px;
-  color: #2196f3;
-  margin-bottom: 25px;
-}
-
-.features .grid li h4 {
-  color: #555;
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-
-.features .grid li p {
-  margin: 0;
-}
-
-@media (max-width: 1000px) {
-  .features .grid li {
-    flex-basis: 70%;
-    margin-bottom: 65px;
-  }
-
-  .features .grid li:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .features .grid li {
-    flex-basis: 100%;
-  }
-}
-
-/*--------------------
- 	Reviews Section
---------------------*/
-
-.reviews {
-  background-color: #fff;
-}
-
-.reviews .quote {
-  text-align: center;
-  width: 80%;
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-.reviews .author {
-  font-size: 18px;
-  margin-bottom: 50px;
-}
-
-.reviews .author:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 1000px) {
-  .reviews .quote {
-    font-size: 20px;
-  }
-
-  .reviews .author {
-    font-size: 16px;
   }
 }
 
