@@ -178,47 +178,77 @@ ul.grid {
     #a3843e
   );
 }
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  padding: 35px 100px 0;
-  min-height: 20vh;
-}
-header h2 {
-  font-family: "Quicksand", sans-serif;
-}
-header nav {
-  display: flex;
-}
-header nav li {
-  margin: 0 15px;
-}
-header nav li:first-child {
-  margin-left: 0;
-}
-header nav li:last-child {
-  margin-right: 0;
-}
-@media (max-width: 1000px) {
-  header {
-    padding: 20px 50px;
-  }
-}
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
+
+  nav-regular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 35px 100px 0;
+    min-height: 20vh;
   }
   header h2 {
-    margin-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+  }
+  header nav {
+    display: flex;
+  }
+  header nav li {
+    margin: 0 15px;
+  }
+  header nav li:first-child {
+    margin-left: 0;
+  }
+  header nav li:last-child {
+    margin-right: 0;
+  }
+  @media (max-width: 1000px) {
+    header {
+      padding: 20px 50px;
+    }
+  }
+  @media (max-width: 700px) {
+    header {
+      flex-direction: column;
+    }
+    header h2 {
+      margin-bottom: 15px;
+    }    
+  }
+
+.mobile-menu-icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-regular {
+    display: none;
+  }
+  .header-mobile-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-mobile-container h2 {
+  }
+  .mobile-menu-icon{
+    color: white;
+    display: block;
+    float: right;
+  }
+  .side-nav {
+    position: fixed;
+    
   }
 }
+
+
 .pageTopper {
   display: flex;
 }
@@ -324,4 +354,27 @@ footer p a {
   #bsaHolder {
     display: none;
   }
+}
+
+.side-nav-does-not-show {
+  width: 0;
+  overflow: hidden; 
+}
+
+.side-nav-does-show {
+  width: 20vw;
+  z-index: 5;
+}
+
+.side-nav {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+
+  transition: width 1s;
+}
+
+.side-nav-ul{
+  display: flex;
+  align-items: column;
 }
