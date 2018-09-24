@@ -12,7 +12,7 @@ import Home from "./Home";
 import About from "./About";
 import Menu from "./Menu";
 import Contact from "./Contact";
-import woodFloor2 from "./imgs/woodFloor2.jpg";
+import woodHeader from "./imgs/woodHeader.jpg";
 
 class App extends Component {
   render() {
@@ -43,7 +43,7 @@ class App extends Component {
           </div>
 
           <div className="header-background">
-            <img src={woodFloor2} />
+            <img src={woodHeader} />
           </div>
 
           <div>

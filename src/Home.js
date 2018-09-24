@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
 import roast from "./imgs/roast.jpg";
+import WoodenBottom from "./imgs/woodBottom.jpg";
 
 const Roaster = require("./imgs/roast.jpg");
 console.log(roast);
@@ -15,9 +16,15 @@ class Home extends Component {
           imageSrc={Roaster}
           opacity={0.0}
           parallaxOffset={100}
-          minHeight="40vh"
+          minHeight="25vw"
           transitionDuration={500}
         />
+
+        <div className="WoodenBottom-container">
+          <img src={WoodenBottom} />
+          <div className="brassDivider" />
+        </div>
+
         <h1>Blank Homepage Component</h1>
         <h3>Write soome other thing here about this thing.</h3>
 
