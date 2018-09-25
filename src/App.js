@@ -16,7 +16,7 @@ import woodHeader from "./imgs/woodHeader.jpg";
 import menuLogo from './imgs/menu.svg';
 import { HamburgerArrow } from 'react-animated-burgers';
 import homelogo from './imgs/homelogo.png';
-
+import './mobilenav.css';
 
 class App extends Component {
 
@@ -34,6 +34,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+
+
           <div className="navWrapper navMobile">
             <header>
               <div className='header-mobile-container'>
@@ -70,6 +72,7 @@ class App extends Component {
                 </div>
               </div>
 
+              
               <div className='nav-regular'>
                 <nav>
                   <li>
@@ -88,7 +91,7 @@ class App extends Component {
               </div>
             </header>
           </div>
-
+          
           <div className="header-background">
             <img src={woodHeader} />
           </div>
