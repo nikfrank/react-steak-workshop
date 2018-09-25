@@ -30,7 +30,7 @@ class App extends Component {
   setMobileMenu = () => this.setState({sideMenuVisible: !this.state.sideMenuVisible})
   
   render() {
-    console.log(this.state)
+
     return (
       <Router>
         <div className="App">
