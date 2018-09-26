@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -20,15 +15,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /*-------------
@@ -143,40 +129,16 @@ ul.grid {
   position: relative;
 }
 
-.WoodenBottom-container img {
+.WoodenBottom-container img:not(.home-brass) {
   width: 100%;
-  height: 25vw;
-  margin-bottom: 0;
+  height: 20vh;
+  margin-bottom: -1vh;
 }
 
-.brassDivider {
-  width: 100%;
-  height: 5vh;
-  position: absolute;
-  bottom: 0;
-  background-image: linear-gradient(
-    #cd9575,
-    #cdb274,
-    #bf9e4f,
-    #b49141,
-    #cd9575,
-    #8f8366,
-    #cd9575,
-    #caab63,
-    #765f28,
-    #a78639,
-    #937e4d,
-    #cd9575,
-    #c7931a,
-    #9b7827,
-    #8f7432,
-    #c4aa6e,
-    #a38643,
-    #c4aa6e,
-    #cd9575,
-    #6b5729,
-    #a3843e
-  );
+.WoodenBottom-container img.home-brass {
+  height: 100vw;
+  width: 20vh;
+  transform: rotate(90deg);
 }
 
 nav-regular {
@@ -207,21 +169,6 @@ header nav li:first-child {
 header nav li:last-child {
   margin-right: 0;
 }
-@media (max-width: 1000px) {
-  header {
-    padding: 20px 50px;
-  }
-}
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-  }
-  header h2 {
-    margin-bottom: 15px;
-  }    
-}
-
-
 
 
 .pageTopper {
@@ -318,11 +265,6 @@ footer p {
 }
 footer p a {
   color: #fff;
-}
-@media (max-width: 700px) {
-  footer {
-    padding: 80px 15px;
-  }
 }
 /* -- Demo ads -- */
 @media (max-width: 1200px) {

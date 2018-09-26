@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
 import roast from "./imgs/roast.jpg";
 import WoodenBottom from "./imgs/woodBottom.jpg";
+import brass from './imgs/brass.jpg';
 
 const Roaster = require("./imgs/roast.jpg");
 console.log(roast);
@@ -22,7 +23,7 @@ class Home extends Component {
 
         <div className="WoodenBottom-container">
           <img src={WoodenBottom} />
-          <div className="brassDivider" />
+          <img src={brass} className='home-brass'/>          
         </div>
 
         <h1>Blank Homepage Component</h1>
