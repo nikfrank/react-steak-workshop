@@ -26,40 +26,41 @@ class Home extends Component {
           transitionDuration={500}
         />
 
-        <div className="WoodenBottom-container">
-          <img src={WoodenBottom} />
-          <img src={brass} className="home-brass" />
+        <div style={{backgroundColor:'#D9CAB3'}}>
+          <div className="WoodenBottom-container">
+            <img src={WoodenBottom} />
+            <img src={brass} className="home-brass" />
+          </div>
+          
+          <div className="spacer" />
+          <h1>Mulligans Steakhouse</h1>
+
+          <ul className="grid">
+            <li
+              className="small"
+              style={{ backgroundImage: `url(${porterhouse})` }}
+            />
+            <li className="small" style={{ backgroundImage: `url(${bbq})` }} />
+            <li className="small" style={{ backgroundImage: `url(${cowboy})` }} />
+          </ul>
+          
+          <div className="Gallery-Blurb">
+            <p>
+              <br />
+              At Mulligans we like steak. And we like whiskey. We also like
+              whiskey on our steak, and with our steak. All of our steaks are
+              served medium rare unless you ask otherwise -in which case we will
+              ask you to leave. We prepare them with the respect steak deserves to
+              be treated: fresh ground peppercorns and sea salt. Cast iron
+              skillet, duck fat and flame. Or choose one of our caveman steaks.{" "}
+              <br />
+              Fire. <br />
+              Steak. <br />
+              <br /> Say steak again, we dare you.
+              <br />
+            </p>
+          </div>
         </div>
-
-        <div className="spacer" />
-        <h1>Mulligans Steakhouse</h1>
-
-        <ul className="grid">
-          <li
-            className="small"
-            style={{ backgroundImage: `url(${porterhouse})` }}
-          />
-          <li className="small" style={{ backgroundImage: `url(${bbq})` }} />
-          <li className="small" style={{ backgroundImage: `url(${cowboy})` }} />
-        </ul>
-
-        <div className="Gallery-Blurb">
-          <p>
-            <br />
-            At Mulligans we like steak. And we like whiskey. We also like
-            whiskey on our steak, and with our steak. All of our steaks are
-            served medium rare unless you ask otherwise -in which case we will
-            ask you to leave. We prepare them with the respect steak deserves to
-            be treated: fresh ground peppercorns and sea salt. Cast iron
-            skillet, duck fat and flame. Or choose one of our caveman steaks.{" "}
-            <br />
-            Fire. <br />
-            Steak. <br />
-            <br /> Say steak again, we dare you.
-            <br />
-          </p>
-        </div>
-
         <section className="contact">
           <h3 className="title">Mulligans</h3>
           <p>Come sit for a while.</p>
@@ -76,12 +77,6 @@ class Home extends Component {
             />
           </ul>
 
-          <form>
-            <input type="email" placeholder="Email" />
-            <a href="#" className="btn">
-              Subscribe now
-            </a>
-          </form>
         </section>
       </div>
     );
