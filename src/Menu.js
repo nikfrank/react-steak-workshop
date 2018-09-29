@@ -6,7 +6,7 @@ import steakFire from "./imgs/steak-fire.jpg";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
 
-import porterhouse from './imgs/porterhouse.jpg';
+import porterhouse from './imgs/porterhouse-menu.jpg';
 import triTip from './imgs/tri-tip.jpg';
 
 import lagavulin from './imgs/lagavulin.jpg';
