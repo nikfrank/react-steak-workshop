@@ -28,7 +28,8 @@
 }
 
 html {
-  font: normal 16px sans-serif;
+  font-family: "Oswald";
+  font: "Oswald" 16px sans-serif;
   color: #555;
 }
 
@@ -89,7 +90,7 @@ section {
 section h3.title {
   color: #414a4f;
   text-transform: capitalize;
-  font: bold 32px "Open Sans", sans-serif;
+  font: bold 32px "Limelight", sans-serif;
   margin-bottom: 35px;
   text-align: center;
 }
@@ -132,13 +133,16 @@ ul.grid {
 .WoodenBottom-container img:not(.home-brass) {
   width: 100%;
   height: 20vh;
-  margin-bottom: -1vh;
+  margin-bottom: 0vh;
 }
 
 .WoodenBottom-container img.home-brass {
-  height: 100vw;
-  width: 20vh;
-  transform: rotate(90deg);
+  height: 4vh;
+  width: 100vw;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 nav-regular {
@@ -154,8 +158,13 @@ nav-regular {
   padding: 35px 100px 0;
   min-height: 20vh;
 }
+
+h1 {
+  font-family: "Limelight";
+}
+
 header h2 {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 header nav {
   display: flex;
@@ -169,7 +178,6 @@ header nav li:first-child {
 header nav li:last-child {
   margin-right: 0;
 }
-
 
 .pageTopper {
   display: flex;
@@ -273,7 +281,6 @@ footer p a {
   }
 }
 
-
-.header-mobile-container h2 img{
+.header-mobile-container h2 img {
   height: 10vh;
 }
