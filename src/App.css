@@ -138,7 +138,7 @@ ul.grid {
 
 .WoodenBottom-container img.home-brass {
   height: 4vh;
-  width: 100vw;
+  width: 100%;
 
   position: absolute;
   bottom: 0;
@@ -161,6 +161,7 @@ nav-regular {
 
 h1 {
   font-family: "Limelight";
+  font-size: 10vw;
 }
 
 header h2 {
@@ -185,26 +186,54 @@ header nav li:last-child {
 /* --------------------
    Our Work Section
    --------------------- */
-.оur-work {
+.spacer {
+  height: 5vw;
+}
+
+.grid {
   background-color: #fff;
 }
-.our-work .grid li {
-  padding: 20px;
+.grid li {
+  padding: 15px;
   height: 350px;
+  width: 350px;
   border-radius: 3px;
   background-clip: content-box;
   background-size: cover;
   background-position: center;
   background-color: #333;
 }
-.our-work .grid li.small {
-  flex-basis: 40%;
+
+.grid li.large {
+  height: 500px;
+  width: 500px;
 }
-.our-work .grid li.large {
-  flex-basis: 60%;
+
+.grid li.small {
+  flex-basis: 30%;
 }
+.grid li.large {
+  flex-basis: 45%;
+}
+
+.Gallery-Blurb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 65vw;
+  border-bottom: 1px solid #51504c;
+  margin: 0 auto;
+}
+.Gallery-Blurb p {
+  max-width: 60vw;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1000px) {
-  .our-work .grid li.small,
+  .grid li.small,
   .our-work .grid li.large {
     flex-basis: 100%;
   }
@@ -244,20 +273,30 @@ header nav li:last-child {
    ------------- */
 footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+  justify-content: space-around;
+
   color: #fff;
-  background-color: #414a4f;
+  background-color: #165b13;
   padding: 60px 0;
 }
 footer ul {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 25px;
   font-size: 32px;
 }
+
+footer ul li img {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+
 footer ul li {
-  margin: 0 8px;
+  margin: 0 60px;
 }
 footer ul li:first-child {
   margin-left: 0;
@@ -265,12 +304,24 @@ footer ul li:first-child {
 footer ul li:last-child {
   margin-right: 0;
 }
+
 footer p {
   text-transform: uppercase;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
 }
+
+.social-sqaure {
+  height: 30px;
+  width: 30px;
+  border-radius: 12px;
+}
+
+.social-square:hover {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45);
+}
+
 footer p a {
   color: #fff;
 }
