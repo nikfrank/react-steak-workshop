@@ -1,0 +1,118 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+.form-container {
+  width: 76.16vw;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: 'Lato', sans-serif;
+  background-color: #eeeeee;
+  color: #b3aca7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 2px 2px 12px 1px #bbbbbb;
+  height: 76vh;
+}
+
+.form-header {
+  width: 71vw;
+  margin: 0 auto;
+  letter-spacing: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+#form {
+  width: 500px;
+  margin: 23px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  background: transparent;
+  outline: none;
+  color: ##13505B;
+  border: solid 1px #13505B;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #dddddd;
+  color: ##13505B;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  background: transparent;
+  outline: none;
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  border: solid 1px #13505B;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #dddddd;
+  color: #13505B;
+}
+
+#submit {
+  width: 502px;
+  padding: 0;
+  margin: 16px 0px 0px 0px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  background-color: #C3C3E6;
+  outline:none;
+  cursor: pointer;
+  border: solid 1px #13505B;
+  box-shadow: 2px 2px 6px 1px #bbbbbb;
+
+}
+
+#submit:hover {
+  color: #13505B;
+  border-top: solid 1px #13505B;
+  background-color: #B2B2D2;
+}
+
+
+.emailInvalid {
+  height: 0;
+}
+
+.emailRetry {
+  float: left;
+  color:#A93F55 ;
+  font-weight: 600;
+  margin: 0 auto;
+  width: 76vw;
+  height: 50px;
+  background: transparent;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.textarea-counter {
+  position: relative;
+  left: 17.1vw;
+  top: .5vh;
+}
+
+.contact-email-div img{
+  position: absolute;
+  height: 5vh;
+  left: 64.8vw;
+  top: 48vh;
+}
