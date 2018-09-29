@@ -17,6 +17,9 @@ import menuLogo from './imgs/menu.svg';
 import { HamburgerArrow } from 'react-animated-burgers';
 import homelogo from './imgs/homelogo.png';
 import './mobilenav.css';
+import Swipeout from 'rc-swipeout';
+import './rc-swipeout.css'; 
+
 
 class App extends Component {
 
@@ -38,10 +41,12 @@ class App extends Component {
 
           <div className="navWrapper navMobile">
             <header>
+              
               <div className='header-mobile-container'>
                 <h2>
                   <NavLink to="/home"><img src={homelogo}/></NavLink>
                 </h2>
+                
                 <div className='hamburger-button-wrapper'
                      onClick={this.setMobileMenu}>
                   <HamburgerArrow
@@ -68,7 +73,22 @@ class App extends Component {
                       <NavLink to="/home"><img src={homelogo}/></NavLink>
                     </li>
                   </ul>
-                  <div className='side-nav-shade' onClick={this.setMobileMenu}/>
+                  <Swipeout
+                    left={[
+                      {
+                        text: 'reply',
+                        onPress:this.setMobileMenu,
+                        style: { backgroundColor: 'orange', color: 'white' },
+                        className: 'custom-class-1'
+                      }
+                    ]}
+                    
+                    onOpen={this.setMobileMenu}
+                  >
+                    
+                    
+                    <div className='side-nav-shade' onClick={this.setMobileMenu}/>
+                  </Swipeout>
                 </div>
               </div>
 
