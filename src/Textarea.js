@@ -13,6 +13,7 @@ class Textarea extends Component {
   render() {
     console.log(this.state)  
     return (
+      
       <div className="textarea-wrapper">
         <textarea onChange={this.setValue} value={this.state.message} placeholder='MESSAGE' maxlength='200'style={{resize:'none'}}/>
         {
