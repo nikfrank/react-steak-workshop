@@ -70,7 +70,7 @@ contact-container input:hover {
   background: #dddddd;
 }
 
-textarea {
+.contact-container textarea {
   width: 470px;
   max-width: 470px;
   background: black;
@@ -84,7 +84,7 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-textarea:hover {
+.contact-container textarea:hover {
   background: black;
 }
 
@@ -117,7 +117,7 @@ textarea:hover {
   .contact-container input{
     width: 300px;
   }
-  textarea {
+  .contact-container textarea {
     width: 300px;
   }
   
@@ -131,7 +131,7 @@ textarea:hover {
   .contact-container input{
     width: 250px;
   }
-  textarea {
+  .contact-container  textarea {
     width: 250px;
   }
   
