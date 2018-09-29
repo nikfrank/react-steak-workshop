@@ -1,3 +1,7 @@
+.contact-section-tag {
+  background-color: #D9CAB3
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -7,20 +11,26 @@
   display: flex;
   flex-flow: row wrap;
   font-family: 'Lato', sans-serif;
-  background-color: #eeeeee;
   color: #b3aca7;
   margin: 0 auto;
   border-radius: 2px;
-  box-shadow: 2px 2px 12px 1px #bbbbbb;
+  box-shadow: 2px 2px 12px 1px black;
   height: 76vh;
+}
+
+.form-container:active {
+  color: #b3aca7
 }
 
 .form-header {
   width: 71vw;
-  margin: 0 auto;
+  color: black;
+  margin: 10px auto 0;
   letter-spacing: 5px;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 5vh;
+  text-shadow: .5px .5px black;
 }
 
 #form {
@@ -28,7 +38,21 @@
   margin: 23px auto 100px auto;
 }
 
-input {
+#form input {
+  background-color: black;
+}
+
+#form input:nth-child(4) {
+  background-color: rgba(50, 50, 50, .3);
+  border: 1px solid black;
+}
+
+
+#form input:nth-child(4):hover{
+  background-color: rgba(100, 100, 100, .2);
+}
+
+.contact-container input {
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   width: 470px;
@@ -36,36 +60,34 @@ input {
   padding: 0px 15px 0px 15px;
   background: transparent;
   outline: none;
-  color: ##13505B;
-  border: solid 1px #13505B;
-  border-bottom: none;
+  color: #B2B2D2;
+  border:  solid 1px black;
+  border-bottom: solid 1px white;
   transition: all 0.3s ease-in-out;
 }
 
-input:hover {
+contact-container input:hover {
   background: #dddddd;
-  color: ##13505B;
 }
 
 textarea {
   width: 470px;
   max-width: 470px;
+  background: black;
   height: 110px;
   max-height: 110px;
   padding: 15px;
-  background: transparent;
   outline: none;
-  color: #726659;
+  color: #B2B2D2;
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
-  border: solid 1px #13505B;
   transition: all 0.3s ease-in-out;
 }
 
 textarea:hover {
-  background: #dddddd;
-  color: #13505B;
+  background: black;
 }
+
 
 #submit {
   width: 502px;
@@ -73,18 +95,49 @@ textarea:hover {
   margin: 16px 0px 0px 0px;
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
-  background-color: #C3C3E6;
   outline:none;
   cursor: pointer;
-  border: solid 1px #13505B;
-  box-shadow: 2px 2px 6px 1px #bbbbbb;
-
+  border: solid 1px black;
+  box-shadow: 2px 2px 6px 1px black;
+  background-color: rgba(100, 100, 100 , .4)
 }
 
-#submit:hover {
-  color: #13505B;
-  border-top: solid 1px #13505B;
-  background-color: #B2B2D2;
+#submit:hover{
+  box-shadow: none;
+}
+
+@media (max-width: 1050px) {
+  #submit {
+    max-width: 350px
+  }
+}
+
+
+@media (max-width: 650px) {
+  .contact-container input{
+    width: 300px;
+  }
+  textarea {
+    width: 300px;
+  }
+  
+  #submit {
+    width: 300px;
+  }
+}
+
+
+@media (max-width: 566px) {
+  .contact-container input{
+    width: 250px;
+  }
+  textarea {
+    width: 250px;
+  }
+  
+  #submit {
+    width: 250px;
+  }
 }
 
 
@@ -105,9 +158,9 @@ textarea:hover {
 }
 
 .textarea-counter {
-  position: relative;
-  left: 17.1vw;
-  top: .5vh;
+  position: absolute;
+  right: 3vw;
+  bottom: 1vh;
 }
 
 .contact-email-div img{
@@ -115,4 +168,34 @@ textarea:hover {
   height: 5vh;
   left: 64.8vw;
   top: 48vh;
+}
+
+
+@media (max-width: 503px) {
+  .contact-container input{
+    width: 250px;
+  }
+  textarea {
+    width: 250px;
+  }
+  
+  #submit {
+    width: 250px;
+  }
+  .textarea-counter{
+    transform: translateX(-100%);
+    display: block;
+    right: 0;
+    bottom: 1vh;
+  }
+}
+
+
+.textarea-wrapper {
+  position: relative;
+  
+}
+
+.textarea-wraper span{
+  position: absolute;
 }
