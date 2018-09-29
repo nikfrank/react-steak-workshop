@@ -87,9 +87,18 @@
   justify-content: center;
 }
 
+.Menu-page .fodal.closing {
+  animation: slideClose 0.7s forwards;
+}
+
 @keyframes slideOpen {
   from { height: 0; }
   to { height: 90vh; }
+}
+
+@keyframes slideClose {
+  from { height: 90vh; }
+  to { height: 0; }
 }
 
 .Menu-page .fodal img {

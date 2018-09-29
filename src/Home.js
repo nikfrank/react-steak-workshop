@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
-import roast from "./imgs/roast.jpg";
+import skirtSteak from "./imgs/skirtSteak.jpg";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
 import cowboy from "./imgs/cowboySteak.jpg";
@@ -9,9 +9,7 @@ import bbq from "./imgs/bbqBrisket.jpg";
 import porterhouse from "./imgs/porterhouse.jpg";
 import brisket from "./imgs/brisket.jpg";
 
-const Roaster = require("./imgs/roast.jpg");
-console.log(roast);
-console.log(Roaster);
+const Roaster = require("./imgs/skirtSteak.jpg");
 
 class Home extends Component {
   render() {

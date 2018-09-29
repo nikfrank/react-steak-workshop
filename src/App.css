@@ -161,6 +161,7 @@ nav-regular {
 h1 {
   font-family: "Limelight";
   font-size: 10vw;
+  color: #60574a;
 }
 
 header h2 {
@@ -311,13 +312,12 @@ footer p {
   margin-bottom: 10px;
 }
 
-.social-sqaure {
-  height: 30px;
-  width: 30px;
-  border-radius: 12px;
+.social-square {
+  border-radius: 14px;
 }
 
 .social-square:hover {
+  background-color: rgba(0,0,0,0.0625);
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45);
 }
 
