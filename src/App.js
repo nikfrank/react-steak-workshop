@@ -13,87 +13,102 @@ import About from "./About";
 import Menu from "./Menu";
 import Contact from "./Contact";
 import woodHeader from "./imgs/woodHeader.jpg";
-import menuLogo from './imgs/menu.svg';
-import { HamburgerArrow } from 'react-animated-burgers';
-import homelogo from './imgs/homelogo.png';
-import './mobilenav.css';
-import Swipeout from 'rc-swipeout';
-import './rc-swipeout.css'; 
-
+import menuLogo from "./imgs/menu.svg";
+import { HamburgerArrow } from "react-animated-burgers";
+import homelogo from "./imgs/homelogo.png";
+import "./mobilenav.css";
+import Swipeout from "rc-swipeout";
+import "./rc-swipeout.css";
+import insta from "./imgs/insta.svg";
+import facebook from "./imgs/facebook.svg";
 
 class App extends Component {
-
-  
-
   state = {
-    sideMenuVisible: false,
-  }
-  
+    sideMenuVisible: false
+  };
 
-  setMobileMenu = () => this.setState({sideMenuVisible: !this.state.sideMenuVisible})
-  
+  setMobileMenu = () =>
+    this.setState({ sideMenuVisible: !this.state.sideMenuVisible });
+
   render() {
-
     return (
       <Router>
         <div className="App">
-
-
           <div className="navWrapper navMobile">
             <header>
-              
-              <div className='header-mobile-container'>
+              <div className="header-mobile-container">
                 <h2>
-                  <NavLink to="/home"><img src={homelogo}/></NavLink>
+                  <NavLink to="/home">
+                    <img src={homelogo} />
+                  </NavLink>
                 </h2>
-                
-                <div className='hamburger-button-wrapper'
-                     onClick={this.setMobileMenu}>
+
+                <div
+                  className="hamburger-button-wrapper"
+                  onClick={this.setMobileMenu}
+                >
                   <HamburgerArrow
                     isActive={this.state.sideMenuVisible}
                     toggleButton={this.setMobileMenu}
-                    barColor="white"/>
+                    barColor="white"
+                  />
                 </div>
 
-                <div className={'side-nav ' + (this.state.sideMenuVisible ? "side-nav-does-show" : "side-nav-does-not-show")}>
+                <div
+                  className={
+                    "side-nav " +
+                    (this.state.sideMenuVisible
+                      ? "side-nav-does-show"
+                      : "side-nav-does-not-show")
+                  }
+                >
                   <ul>
                     <li>
-                      <NavLink to="/home"><div>Home</div></NavLink>
+                      <NavLink to="/home">
+                        <div>Home</div>
+                      </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/about"><div>About</div></NavLink>
+                      <NavLink to="/about">
+                        <div>About</div>
+                      </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/menu"><div>Menu</div></NavLink>
-                    </li>                  
-                    <li>
-                      <NavLink to="/contact"><div>Contact</div></NavLink>
+                      <NavLink to="/menu">
+                        <div>Menu</div>
+                      </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/home"><img src={homelogo}/></NavLink>
+                      <NavLink to="/contact">
+                        <div>Contact</div>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/home">
+                        <img src={homelogo} />
+                      </NavLink>
                     </li>
                   </ul>
                   <Swipeout
                     left={[
                       {
-                        text: 'reply',
-                        onPress:this.setMobileMenu,
-                        style: { backgroundColor: 'orange', color: 'white' },
-                        className: 'custom-class-1'
+                        text: "reply",
+                        onPress: this.setMobileMenu,
+                        style: { backgroundColor: "orange", color: "white" },
+                        className: "custom-class-1"
                       }
                     ]}
-                    
                     onOpen={this.setMobileMenu}
                   >
-                    
-                    
-                    <div className='side-nav-shade' onClick={this.setMobileMenu}/>
+                    <div
+                      className="side-nav-shade"
+                      onClick={this.setMobileMenu}
+                    />
                   </Swipeout>
                 </div>
               </div>
 
-              
-              <div className='nav-regular'>
+              <div className="nav-regular">
                 <nav>
                   <li>
                     <NavLink to="/home">Home</NavLink>
@@ -103,7 +118,7 @@ class App extends Component {
                   </li>
                   <li>
                     <NavLink to="/menu">Menu</NavLink>
-                  </li>                  
+                  </li>
                   <li>
                     <NavLink to="/contact">Contact</NavLink>
                   </li>
@@ -111,7 +126,7 @@ class App extends Component {
               </div>
             </header>
           </div>
-          
+
           <div className="header-background">
             <img src={woodHeader} />
           </div>
@@ -131,37 +146,24 @@ class App extends Component {
             <ul>
               <li>
                 <a href="#">
-                  <i className="fa fa-twitter-square" />
+                  <img src={insta} className="social-square insta" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa fa-facebook-square" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-snapchat-square" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-pinterest-square" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-github-square" />
+                  <img src={facebook} className="social-square face" />
                 </a>
               </li>
             </ul>
-            <p>
-              Made by{" "}
-              <a href="..." target="_blank">
-                CapsLok
-              </a>.{" "}
-            </p>
-            <p>Watch us ball out on these mofos</p>
+            <div>
+              <p>
+                Made by{" "}
+                <a href="..." target="_blank">
+                  CapsLok
+                </a>.{" "}
+              </p>
+              <p>Watch us ball out on these mofos</p>
+            </div>
           </footer>
         </div>
       </Router>
