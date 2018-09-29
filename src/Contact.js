@@ -37,7 +37,7 @@ class Contact extends Component {
     return (
 
       <div>
-        <section className=''>
+        <section className='contact-section-tag'>
 
           <div className='page contact-container'>
             <div className="form-container" style={{backgroundImage: `url(${contactWood})`}}>
