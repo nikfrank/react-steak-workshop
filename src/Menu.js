@@ -161,8 +161,9 @@ class Menu extends Component {
             <li className='menu-paper' style={{
               backgroundImage: `url(${oldPaper})`
             }}>
-              <h1>The menu goes here</h1>
-              <h3>Write some other thing here about this thing.</h3>
+              <h1>Bring your own meat</h1>
+              <h3>We'll cook it here <br/><small>$25 grill courtesy</small></h3>
+              <h3>Medium <small>or</small> Rare <small>only</small></h3>
             </li>
             
           </ul>
