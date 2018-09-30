@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
-import woodHeader from "./imgs/woodHeader.jpg";
 
 import steakFire from "./imgs/filet-mignon.jpg";
 import WoodenBottom from "./imgs/woodBottom.jpg";
@@ -134,8 +133,8 @@ class Menu extends Component {
         />
 
         <div className="WoodenBottom-container">
-          <img src={WoodenBottom} />
-          <img src={brass} className="home-brass" />
+          <img alt='' src={WoodenBottom} />
+          <img alt='' src={brass} className="home-brass" />
         </div>
 
         <section>
@@ -166,7 +165,7 @@ class Menu extends Component {
                         className={"fodal " + (closingFodal ? "closing" : "")}
                         onClick={this.closeFodal}
                       >
-                        <img src={imgSrc} />
+                        <img alt='' src={imgSrc} />
                       </div>
                      ) : null}
                   </div>
