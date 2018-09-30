@@ -46,6 +46,10 @@ a {
   opacity: 0.9;
 }
 
+.nav-regular a {
+  font-size: 20px;
+}
+
 a:hover {
   opacity: 1;
 }
@@ -335,4 +339,9 @@ footer p a {
 
 .header-mobile-container h2 img {
   height: 10vh;
+}
+
+.homelogo-text {
+  font-family: "Limelight";
+  font-size: 40px;
 }
