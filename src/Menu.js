@@ -2,123 +2,135 @@ import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
 import woodHeader from "./imgs/woodHeader.jpg";
 
-import steakFire from "./imgs/steak-fire.jpg";
+import steakFire from "./imgs/filet-mignon.jpg";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
 
-import porterhouse from './imgs/porterhouse-menu.jpg';
-import triTip from './imgs/tri-tip.jpg';
+import porterhouse from "./imgs/porterhouse-menu.jpg";
+import triTip from "./imgs/tri-tip.jpg";
 
-import lagavulin from './imgs/lagavulin.jpg';
+import lagavulin from "./imgs/lagavulin.jpg";
 
-import oldPaper from './imgs/old-paper.png';
+import oldPaper from "./imgs/old-paper.png";
 
-import './Menu.css';
+import "./Menu.css";
 
-
-const coinByLang = { en: 'USD', he: 'ILS' };
-const coinSymbols = { USD: '$', ILS: '₪' };
+const coinByLang = { en: "USD", he: "ILS" };
+const coinSymbols = { USD: "$", ILS: "₪" };
 
 class Menu extends Component {
   state = {
     pages: [
       {
-        title: 'Steaks',
+        title: "Steaks",
         items: [
           {
             nameByLang: {
-              he: 'פורטרהאוס',
-              en: 'Porterhouse',
+              he: "פורטרהאוס",
+              en: "Porterhouse"
             },
             weight: {
               g: 764,
-              oz: 27,
+              oz: 27
             },
             priceByCoin: {
               ILS: 200,
-              USD: 54,
+              USD: 54
             },
-            imgSrc: porterhouse,
+            imgSrc: porterhouse
           },
           {
             nameByLang: {
-              he: 'טריי-טיפס',
-              en: 'Tri-tips',
+              he: "טריי-טיפס",
+              en: "Tri-tips"
             },
             weight: {
               g: 539,
-              oz: 19,
+              oz: 19
             },
             priceByCoin: {
               ILS: 150,
-              USD: 54,
+              USD: 54
             },
-            imgSrc: triTip,
-          },
-        ],
+            imgSrc: triTip
+          }
+        ]
       },
 
       {
-        title: 'Whisky',
+        title: "Whisky",
         items: [
           {
             nameByLang: {
-              he: 'לאגוולין',
-              en: 'Lagavulin',
+              he: "לאגוולין",
+              en: "Lagavulin"
             },
             volume: {
               ml: 57,
-              oz: 2,
+              oz: 2
             },
             priceByCoin: {
               ILS: 50,
-              USD: 14,
+              USD: 14
             },
-            imgSrc: lagavulin,
-          },
-        ],
-      },
+            imgSrc: lagavulin
+          }
+        ]
+      }
     ],
 
     pageIndex: null,
     itemIndex: null,
     closingFodal: false,
 
-    currentLang: 'en',
-    langs: ['en', 'he'],
-  }
+    currentLang: "en",
+    langs: ["en", "he"]
+  };
 
-  openFodal = (pageIndex, itemIndex)=>
-    this.setState({ pageIndex, itemIndex })
+  openFodal = (pageIndex, itemIndex) => this.setState({ pageIndex, itemIndex });
 
-  closeFodal = (e)=> {
+  closeFodal = e => {
     e.stopPropagation();
     this.setState({ closingFodal: true });
-    
-    setTimeout(()=>
-      this.setState({ pageIndex: null, itemIndex: null, closingFodal: false }), 700);
-  }
 
-  toggleLang = ()=> this.setState(state => ({
-    currentLang: state.langs[
-      (state.langs.indexOf( state.currentLang ) + 1) % state.langs.length
-    ]
-  }) )
-  
+    setTimeout(
+      () =>
+        this.setState({
+          pageIndex: null,
+          itemIndex: null,
+          closingFodal: false
+        }),
+      700
+    );
+  };
+
+  toggleLang = () =>
+    this.setState(state => ({
+      currentLang:
+        state.langs[
+          (state.langs.indexOf(state.currentLang) + 1) % state.langs.length
+        ]
+    }));
   render() {
-    const { pages, pageIndex, itemIndex, currentLang, closingFodal } = this.state;
+    const {
+      pages,
+      pageIndex,
+      itemIndex,
+      currentLang,
+      closingFodal
+    } = this.state;
 
     const coin = coinByLang[currentLang];
-    
+
     return (
-      <div className='Menu-page'>
+      <div className="Menu-page">
         <LazyHero
-            className="pageTopper"
-            imageSrc={steakFire}
-            opacity={0.0}
-            parallaxOffset={100}
-            minHeight="25vw"
-            transitionDuration={500}
+          className="pageTopper"
+          imageSrc={steakFire}
+          opacity={0.0}
+          parallaxOffset={100}
+          minHeight="25vw"
+          transitionDuration={500}
         />
 
         <div className="WoodenBottom-container">
@@ -127,37 +139,41 @@ class Menu extends Component {
         </div>
 
         <section>
-          <ul className='menu-pages'>
-            {
-              pages.map(({ title, items }, pi)=> (
-                <li className='menu-paper' key={title} style={{
+          <ul className="menu-pages">
+            {pages.map(({ title, items }, pi) => (
+              <li
+                className="menu-paper"
+                key={title}
+                style={{
                   backgroundImage: `url(${oldPaper})`
-                }}>
-                  <div className='lang-toggle' onClick={this.toggleLang}>
-                    {currentLang}
-                  </div>
-                  <h1>{title}</h1>
-                  {
-                    items.map(({ nameByLang, priceByCoin, imgSrc }, ii)=> (
-                      <div className='menu-item'
-                           onClick={()=> this.openFodal(pi, ii)}
-                           key={nameByLang.en}>
-                        {nameByLang[currentLang]}
-                        - {coinSymbols[coin]}{priceByCoin[coin]}
-                        {
-                          (( pageIndex === pi ) && ( itemIndex === ii)) ? (
-                            <div className={'fodal '+(closingFodal ? 'closing':'')}
-                                 onClick={this.closeFodal}>
-                              <img src={imgSrc}/>
-                            </div>
-                          ) : null
-                        }
+                }}
+              >
+                <div className="lang-toggle" onClick={this.toggleLang}>
+                  {currentLang}
+                </div>
+                <h1>{title}</h1>
+                {items.map(({ nameByLang, priceByCoin, imgSrc }, ii) => (
+                  <div
+                    className="menu-item"
+                    onClick={() => this.openFodal(pi, ii)}
+                    key={nameByLang.en}
+                  >
+                    {nameByLang[currentLang]}
+                    - {coinSymbols[coin]}
+                    {priceByCoin[coin]}
+                    {(pageIndex === pi && itemIndex === ii) ? (
+                      <div
+                        className={"fodal " + (closingFodal ? "closing" : "")}
+                        onClick={this.closeFodal}
+                      >
+                        <img src={imgSrc} />
                       </div>
-                    ) )
-                  }
-                </li>
-              ) )
-            }
+                     ) : null}
+                  </div>
+                  ) )
+                }
+              </li>
+             ) )}
             <li className='menu-paper' style={{
               backgroundImage: `url(${oldPaper})`
             }}>
@@ -165,7 +181,6 @@ class Menu extends Component {
               <h3>We'll cook it here <br/><small>$25 grill courtesy</small></h3>
               <h3>Medium <small>or</small> Rare <small>only</small></h3>
             </li>
-            
           </ul>
         </section>
       </div>
