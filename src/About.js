@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './About.css';
+//import './About.css';
 const Roaster = require("./imgs/roast.jpg");
 
 class About extends Component {
