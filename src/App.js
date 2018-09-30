@@ -37,10 +37,8 @@ class App extends Component {
           <div className="navWrapper navMobile">
             <header>
               <div className="header-mobile-container">
-                <h2>
-                  <NavLink to="/home">
-                    <img src={homelogo} />
-                  </NavLink>
+                <h2 className="homelogo-text">
+                  <NavLink to="/home">Mulligans</NavLink>
                 </h2>
 
                 <div
