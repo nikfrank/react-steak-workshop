@@ -81,6 +81,7 @@ class Menu extends Component {
 
     pageIndex: null,
     itemIndex: null,
+    closingFodal: false,
 
     currentLang: "en",
     langs: ["en", "he"]
@@ -90,7 +91,17 @@ class Menu extends Component {
 
   closeFodal = e => {
     e.stopPropagation();
-    this.setState({ pageIndex: null, itemIndex: null });
+    this.setState({ closingFodal: true });
+
+    setTimeout(
+      () =>
+        this.setState({
+          pageIndex: null,
+          itemIndex: null,
+          closingFodal: false
+        }),
+      700
+    );
   };
 
   toggleLang = () =>
@@ -100,9 +111,14 @@ class Menu extends Component {
           (state.langs.indexOf(state.currentLang) + 1) % state.langs.length
         ]
     }));
-
   render() {
-    const { pages, pageIndex, itemIndex, currentLang } = this.state;
+    const {
+      pages,
+      pageIndex,
+      itemIndex,
+      currentLang,
+      closingFodal
+    } = this.state;
 
     const coin = coinByLang[currentLang];
 
@@ -146,7 +162,10 @@ class Menu extends Component {
                     - {coinSymbols[coin]}
                     {priceByCoin[coin]}
                     {pageIndex === pi && itemIndex === ii ? (
-                      <div className="fodal" onClick={this.closeFodal}>
+                      <div
+                        className={"fodal " + (closingFodal ? "closing" : "")}
+                        onClick={this.closeFodal}
+                      >
                         <img src={imgSrc} />
                       </div>
                     ) : null}
