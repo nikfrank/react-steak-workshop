@@ -343,3 +343,22 @@ footer p a {
   font-family: "Limelight";
   font-size: 40px;
 }
+
+div .made-by {
+  align-content: center;
+}
+
+.capsloklogo-public-div {
+  margin-left: 40px
+}
+@media(max-width: 1000px) {
+  .capsloklogo-public-div {
+    margin-left: 68px;
+  }
+}
+
+@media(max-width: 400px) {
+  .capsloklogo-public-div {
+    margin-left: 40px;
+  }
+}

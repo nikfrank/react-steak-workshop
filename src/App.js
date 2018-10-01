@@ -21,6 +21,7 @@ import Swipeout from "rc-swipeout";
 import "./rc-swipeout.css";
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
+import { Logo } from 'capsloklogo';
 
 class App extends Component {
   state = {
@@ -30,7 +31,10 @@ class App extends Component {
   setMobileMenu = () =>
     this.setState({ sideMenuVisible: !this.state.sideMenuVisible });
 
+
+  
   render() {
+
     return (
       <Router>
         <div className="App">
@@ -55,9 +59,9 @@ class App extends Component {
                 <div
                   className={
                     "side-nav " +
-                    (this.state.sideMenuVisible
-                      ? "side-nav-does-show"
-                      : "side-nav-does-not-show")
+                      (this.state.sideMenuVisible
+                     ? "side-nav-does-show"
+                     : "side-nav-does-not-show")
                   }
                 >
                   <ul>
@@ -153,12 +157,10 @@ class App extends Component {
                 </a>
               </li>
             </ul>
-            <div>
-              <p>
-                Made by{" "}
-                <a href="..." target="_blank">
-                  CapsLok
-                </a>.{" "}
+            <div className='made-by'>
+              <p>                
+                Made by
+                <Logo/>
               </p>
               <p>Watch us ball out on these mofos</p>
             </div>
