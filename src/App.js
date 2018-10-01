@@ -21,6 +21,7 @@ import Swipeout from "rc-swipeout";
 import "./rc-swipeout.css";
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
+import Caps from "./imgs/caps6.svg";
 
 class App extends Component {
   state = {
@@ -153,12 +154,11 @@ class App extends Component {
                 </a>
               </li>
             </ul>
-            <div>
+            <div className="Caps-Logo">
               <p>
-                Made by{" "}
                 <a href="..." target="_blank">
-                  CapsLok
-                </a>.{" "}
+                  <img src={Caps} />
+                </a>
               </p>
               <p>Watch us ball out on these mofos</p>
             </div>
