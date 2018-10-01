@@ -155,19 +155,11 @@ class App extends Component {
                 </a>
               </li>
             </ul>
-<<<<<<< HEAD
+
             <div className='made-by'>
               <p>                
                 Made by
                 <Logo/>
-=======
-            <div>
-              <p>
-                Made by
-                <a href="..." target="_blank">
-                  CapsLok
-                </a>.
->>>>>>> 24298ed0f0b981f7529571329f6b8ead99612963
               </p>
               <p>Watch us ball out on these mofos</p>
             </div>
