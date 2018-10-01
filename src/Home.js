@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
-import skirtSteak from "./imgs/skirtSteak.jpg";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
 import cowboy from "./imgs/cowboySteak.jpg";
@@ -26,8 +25,8 @@ class Home extends Component {
 
         <div style={{backgroundColor:'#D9CAB3'}}>
           <div className="WoodenBottom-container">
-            <img src={WoodenBottom} />
-            <img src={brass} className="home-brass" />
+            <img alt='' src={WoodenBottom} />
+            <img alt='' src={brass} className="home-brass" />
           </div>
           
           <div className="spacer" />

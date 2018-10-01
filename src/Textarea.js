@@ -11,11 +11,10 @@ class Textarea extends Component {
   
   
   render() {
-    console.log(this.state)  
     return (
       
       <div className="textarea-wrapper">
-        <textarea onChange={this.setValue} value={this.state.message} placeholder='MESSAGE' maxlength='200'style={{resize:'none'}}/>
+        <textarea onChange={this.setValue} value={this.state.message} placeholder='MESSAGE' maxLength='200'style={{resize:'none'}}/>
         {
           this.state.message.length < 200 ?
           <span className="textarea-counter">{this.state.message.length}/200</span> :

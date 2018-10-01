@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import {
   Route,
@@ -13,7 +12,6 @@ import About from "./About";
 import Menu from "./Menu";
 import Contact from "./Contact";
 import woodHeader from "./imgs/woodHeader.jpg";
-import menuLogo from "./imgs/menu.svg";
 import { HamburgerArrow } from "react-animated-burgers";
 import homelogo from "./imgs/homelogo.png";
 import "./mobilenav.css";
@@ -87,7 +85,7 @@ class App extends Component {
                     </li>
                     <li>
                       <NavLink to="/home">
-                        <img src={homelogo} />
+                        <img alt='' src={homelogo} />
                       </NavLink>
                     </li>
                   </ul>
@@ -130,7 +128,7 @@ class App extends Component {
           </div>
 
           <div className="header-background">
-            <img src={woodHeader} />
+            <img alt='' src={woodHeader} />
           </div>
 
           <div>
@@ -147,20 +145,29 @@ class App extends Component {
           <footer>
             <ul>
               <li>
-                <a href="#">
-                  <img src={insta} className="social-square insta" />
+                <a href="/">
+                  <img alt='' src={insta} className="social-square insta" />
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <img src={facebook} className="social-square face" />
+                <a href="/">
+                  <img alt='' src={facebook} className="social-square face" />
                 </a>
               </li>
             </ul>
+<<<<<<< HEAD
             <div className='made-by'>
               <p>                
                 Made by
                 <Logo/>
+=======
+            <div>
+              <p>
+                Made by
+                <a href="..." target="_blank">
+                  CapsLok
+                </a>.
+>>>>>>> 24298ed0f0b981f7529571329f6b8ead99612963
               </p>
               <p>Watch us ball out on these mofos</p>
             </div>

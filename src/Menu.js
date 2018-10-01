@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
-import woodHeader from "./imgs/woodHeader.jpg";
 
 import steakFire from "./imgs/filet-mignon.jpg";
 import WoodenBottom from "./imgs/woodBottom.jpg";
@@ -134,8 +133,8 @@ class Menu extends Component {
         />
 
         <div className="WoodenBottom-container">
-          <img src={WoodenBottom} />
-          <img src={brass} className="home-brass" />
+          <img alt='' src={WoodenBottom} />
+          <img alt='' src={brass} className="home-brass" />
         </div>
 
         <section>
@@ -161,26 +160,25 @@ class Menu extends Component {
                     {nameByLang[currentLang]}
                     - {coinSymbols[coin]}
                     {priceByCoin[coin]}
-                    {pageIndex === pi && itemIndex === ii ? (
+                    {(pageIndex === pi && itemIndex === ii) ? (
                       <div
                         className={"fodal " + (closingFodal ? "closing" : "")}
                         onClick={this.closeFodal}
                       >
-                        <img src={imgSrc} />
+                        <img alt='' src={imgSrc} />
                       </div>
-                    ) : null}
+                     ) : null}
                   </div>
-                ))}
+                  ) )
+                }
               </li>
-            ))}
-            <li
-              className="menu-paper"
-              style={{
-                backgroundImage: `url(${oldPaper})`
-              }}
-            >
-              <h1>The menu goes here</h1>
-              <h3>Write some other thing here about this thing.</h3>
+             ) )}
+            <li className='menu-paper' style={{
+              backgroundImage: `url(${oldPaper})`
+            }}>
+              <h1>Bring your own meat</h1>
+              <h3>We'll cook it here <br/><small>$25 grill courtesy</small></h3>
+              <h3>Medium <small>or</small> Rare <small>only</small></h3>
             </li>
           </ul>
         </section>
