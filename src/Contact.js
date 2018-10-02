@@ -1,93 +1,116 @@
 import React, { Component } from "react";
 import LazyHero from "react-lazy-hero";
-import './ContactForm.css';
-import Textarea from './Textarea';
-import Correct from './imgs/correct.svg';
-import X from './imgs/delete-button.svg';
-import contactWood from './imgs/woodFloor3.jpg'
+import "./ContactForm.css";
+import Textarea from "./Textarea";
+import Correct from "./imgs/correct.svg";
+import X from "./imgs/delete-button.svg";
+import contactWood from "./imgs/woodFloor3.jpg";
+import WoodenBottom from "./imgs/woodBottom.jpg";
+import brass from "./imgs/brassFix.jpg";
 
-
+const Girls = require("./imgs/girls.jpg");
 
 class Contact extends Component {
-  state = { userName: '',
-            email: '',
-            telNo1: '',
-            telNo2: '',
-            telNo3: '',
-            message: '',
-            submit: false,
-  }
+  state = {
+    userName: "",
+    email: "",
+    telNo1: "",
+    telNo2: "",
+    telNo3: "",
+    message: "",
+    submit: false
+  };
 
-  setUserName = (event)=> this.setState({userName: event.target.value});
-  setEmail = ({ target: {value} })=>
+  setUserName = event => this.setState({ userName: event.target.value });
+  setEmail = ({ target: { value } }) =>
     this.setState({
       email: value,
-      isEmailValid: value.includes('@' && '.' )
-    })
-  setTelNo1 = (event)=> this.setState({ telNo1: event.target.value });
-  setTelNo2 = (event)=> this.setState({ telNo2: event.target.value });
-  setTelNo3 = (event)=> this.setState({ telNo3: event.target.value });
-  
-  setMessage = (event)=> this.setState({ message: event.target.value  });
-  setSubmit = (event)=> this.setState({ submit: event.target.value  });
+      isEmailValid: value.includes("@" && ".")
+    });
+  setTelNo1 = event => this.setState({ telNo1: event.target.value });
+  setTelNo2 = event => this.setState({ telNo2: event.target.value });
+  setTelNo3 = event => this.setState({ telNo3: event.target.value });
+
+  setMessage = event => this.setState({ message: event.target.value });
+  setSubmit = event => this.setState({ submit: event.target.value });
 
   render() {
     const { userName, email, telNo1, telNo2, telNo3, message } = this.state;
 
     return (
-
       <div>
-        <section className='contact-section-tag'>
+        <LazyHero
+          className="pageTopper"
+          imageSrc={Girls}
+          opacity={0.0}
+          parallaxOffset={100}
+          minHeight="25vw"
+          transitionDuration={700}
+        />
 
-          <div className='page contact-container'>
-            <div className="form-container" style={{backgroundImage: `url(${contactWood})`}}>
-
-              <h1 className="form-header">Send us your message</h1>
-
-              <div className='emailInvalid'>
-                
-              </div>
-
-              <form id="form" class="topBefore">
-                <input id="name" type="text" placeholder="NAME" onChange={this.setUserName} value={userName}/>
-
-                <div className='contact-email-div'>
-                  <input id="email"
-                         type="text"
-                         placeholder="E-MAIL"
-                         onChange={this.setEmail}
-                         value={email}/>
-                  {
-                    !!this.state.email.length ?
-                    
-                    !!this.state.isEmailValid ? (
-                      <img src={Correct}/> 
-                      
-                    ) : (
-                      <img src={X} /> 
-                    ) : null
-                  }
-                </div>
-                
-
-                <div className='contact-message-div'>
-                  <Textarea
-                    id="message"
-                    type="text"
-                    onChange={this.setMessage}
-                    value={message}/>
-                  
-                </div>
-                <input id="submit"
-                       type="submit"
-                       value="SUBMIT"
-                       onChange={this.setSubmit} />
-
-              </form>
-
-            </div>
+        <div style={{ backgroundColor: "#D9CAB3" }}>
+          <div className="WoodenBottom-container">
+            <img src={WoodenBottom} />
+            <img src={brass} className="home-brass" />
           </div>
-        </section>
+
+          <div className="spacer" />
+
+          <section className="contact-section-tag">
+            <div className="page contact-container">
+              <div
+                className="form-container"
+                style={{ backgroundImage: `url(${contactWood})` }}
+              >
+                <h1 className="form-header">Send us your message</h1>
+
+                <div className="emailInvalid" />
+
+                <form id="form" class="topBefore">
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="NAME"
+                    onChange={this.setUserName}
+                    value={userName}
+                  />
+
+                  <div className="contact-email-div">
+                    <input
+                      id="email"
+                      type="text"
+                      placeholder="E-MAIL"
+                      onChange={this.setEmail}
+                      value={email}
+                    />
+                    {!!this.state.email.length ? (
+                      !!this.state.isEmailValid ? (
+                        <img src={Correct} />
+                      ) : (
+                        <img src={X} />
+                      )
+                    ) : null}
+                  </div>
+
+                  <div className="contact-message-div">
+                    <Textarea
+                      id="message"
+                      type="text"
+                      onChange={this.setMessage}
+                      value={message}
+                    />
+                  </div>
+                  <input
+                    id="submit"
+                    type="submit"
+                    value="SUBMIT"
+                    onChange={this.setSubmit}
+                  />
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     );
   }
