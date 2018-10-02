@@ -20,7 +20,9 @@ import "./rc-swipeout.css";
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
 
-import { Logo } from 'capsloklogo';
+//import { Logo } from 'capsloklogo';
+
+import cursiveLogo from 'capsloklogo/dist/CapsSquare-cursive.svg';
 
 class App extends Component {
   state = {
@@ -160,7 +162,9 @@ class App extends Component {
             <div className='made-by'>
               <p>                
                 Made by
-                <Logo/>
+                <div>
+                  <img src={cursiveLogo} alt=''/>
+                </div>
               </p>
               <p>Watch us ball out on these mofos</p>
             </div>
