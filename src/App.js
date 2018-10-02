@@ -19,9 +19,10 @@ import Swipeout from "rc-swipeout";
 import "./rc-swipeout.css";
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
-//import { Logo } from 'capsloklogo';
 
-import cursiveLogo from 'capsloklogo/dist/CapsSquare-cursive.svg';
+//import { Logo } from 'capsloklogo';
+//import cursiveLogo from 'capsloklogo/dist/CapsSquare-cursive.svg';
+import { Cursive } from 'capsloklogo';
 
 class App extends Component {
   state = {
@@ -159,12 +160,16 @@ class App extends Component {
             </ul>
 
             <div className='made-by'>
-              <p>                
+              <div>
                 Made by
                 <div>
-                  <img src={cursiveLogo} alt=''/>
+                  <Cursive className='foot-logo'
+                           style={{
+                             color: 'darkblue',
+                             backgroundFill: 'cyan',
+                           }}/>
                 </div>
-              </p>
+              </div>
               <p>Watch us ball out on these mofos</p>
             </div>
           </footer>

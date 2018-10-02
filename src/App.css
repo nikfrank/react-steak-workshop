@@ -367,10 +367,17 @@ footer p a {
   .capsloklogo-public-div {
     margin-left: 40px;
   }
-
 }
 
 
+.foot-logo {
+  height: 100px;
+}
+
+.foot-logo:hover path {
+  stroke: blue;
+  fill: cyan;
+}
 
 
 
