@@ -19,7 +19,6 @@ import Swipeout from "rc-swipeout";
 import "./rc-swipeout.css";
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
-
 //import { Logo } from 'capsloklogo';
 
 import cursiveLogo from 'capsloklogo/dist/CapsSquare-cursive.svg';
