@@ -19,8 +19,12 @@ import Swipeout from "rc-swipeout";
 import "./rc-swipeout.css";
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
+<<<<<<< Updated upstream
 
 import { Logo } from 'capsloklogo';
+=======
+import Caps from "./imgs/CapsGrey.svg";
+>>>>>>> Stashed changes
 
 class App extends Component {
   state = {
