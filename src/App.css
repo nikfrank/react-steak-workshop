@@ -375,8 +375,34 @@ footer p a {
 }
 
 .foot-logo:hover path {
-  stroke: blue;
-  fill: cyan;
+  stroke: #e8e;
+  fill: purple;
+}
+
+.foot-logo:hover path:nth-child(1) {
+  animation: spin 1 1.25s linear reverse;
+  transform-origin: -1780px 34px;
+}
+
+.foot-logo:hover path:nth-child(2) {
+  animation: spin 1 1.375s linear reverse;
+  transform-origin: -1770px 34px;
+}
+
+.foot-logo:hover path:nth-child(3) {
+  animation: spin 1 1.5s linear reverse;
+  transform-origin: -1760px 34px;
+}
+
+.foot-logo:hover path:nth-child(4) {
+  animation: spin 1 1.625s linear reverse;
+  transform-origin: -1750px 34px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1, 1) }
+  50% { transform: rotate(-180deg) scale(2, 2) }
+  100% { transform: rotate(-360deg) scale(1, 1) }
 }
 
 

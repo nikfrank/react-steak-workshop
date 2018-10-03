@@ -165,7 +165,7 @@ class App extends Component {
                 <div>
                   <Cursive className='foot-logo'
                            style={{
-                             color: 'darkblue',
+                             color: 'purple',
                              backgroundFill: 'cyan',
                            }}/>
                 </div>
