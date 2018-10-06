@@ -19,12 +19,12 @@ class About extends Component {
     return (
       <div>
         <LazyHero
-          className="pageTopper"
-          imageSrc={Rib}
-          opacity={0.0}
-          parallaxOffset={100}
-          minHeight="25vw"
-          transitionDuration={700}
+            className="pageTopper"
+            imageSrc={Rib}
+            opacity={0.0}
+            parallaxOffset={100}
+            minHeight="25vw"
+            transitionDuration={700}
         />
 
         <div style={{ backgroundColor: "#D9CAB3" }}>
@@ -38,12 +38,12 @@ class About extends Component {
           <h1>Mulligans Steakhouse</h1>
           <ul className="grid">
             <li
-              className="small"
-              style={{ backgroundImage: `url(${asian})` }}
+                className="small"
+                style={{ backgroundImage: `url(${asian})` }}
             />
             <li
-              className="small"
-              style={{ backgroundImage: `url(${moFire})` }}
+                className="small"
+                style={{ backgroundImage: `url(${moFire})` }}
             />
           </ul>
           <div className="Gallery-Blurb">
@@ -71,50 +71,50 @@ class About extends Component {
           <div className="Staff-Bios">
             <div className="Staff-Card">
               <div>
-                <img alt='' src={Amanda} />
+                <div style={{ backgroundImage: `url(${Amanda})` }} />
+                <h3><span>Head Chef</span></h3>
               </div>
-              <div>
-                <h2>Jamie Weinhouse</h2>
-                <h3>Head Chef</h3>
-                <p>
-                  Jamie grew up working in her parents deli, and had mastered
-                  the art of the craft cocktail long before she hit the drinking
-                  age. She studied at Auguste Escoffier School of Culinary Arts,
-                  and has worked in some of the most celebrated kitchens around
-                  the globe. <br /> Shes on the all steak diet. <br /> <br />{" "}
-                  Whats your excuse?
-                </p>
-              </div>
+              
+              <h2>Jamie Weinhaus</h2>
+              
+              <p>
+                Jamie grew up working in her parents deli, and had mastered
+                the art of the craft cocktail long before she hit the drinking
+                age. She studied at Auguste Escoffier School of Culinary Arts,
+                and has worked in some of the most celebrated kitchens around
+                the globe. <br /> Shes on the all steak diet. <br /> <br />
+                Whats your excuse?
+              </p>
+
             </div>
 
             <div className="Staff-Card">
               <div>
-                <img alt='' src={Stacey} />
+                <div style={{ backgroundImage: `url(${Stacey})`}} />
+                <h3><span>Mixologist</span></h3>
               </div>
-              <div>
-                <h2>Stacey Smith</h2>
-                <h3>Head Bartender</h3>
-                <p>
-                  Stacey loves steak, but she loves whiskey more. She learned
-                  the art of distilling scotch during her travels in Japan
-                  before shooting down to Kentucky to try her hand at bourbon.
-                  Stacey worked at the renowned Clydes Commons bar in Portland
-                  Oregon and serves up fresh cocktails that will leave you
-                  asking "Where have you been all my life?" <br />
-                  <br />Stacey chases her whiskey with high fives.{" "}
-                </p>
-              </div>
+
+              <h2>Stacey Smith</h2>
+              <p>
+                Stacey loves steak, but she loves whiskey more. She learned
+                the art of distilling scotch during her travels in Japan
+                before shooting down to Kentucky to try her hand at bourbon.
+                Stacey worked at the renowned Clyde's Commons bar in Portland
+                Oregon and serves up fresh cocktails that will leave you
+                asking "Where have you been all my life?" <br />
+                <br />Stacey chases her whiskey with high fives.
+              </p>
             </div>
           </div>
         </div>
         <div>
           <LazyHero
-            className="pageBottom"
-            imageSrc={Bar}
-            opacity={0.0}
-            parallaxOffset={100}
-            minHeight="45vw"
-            transitionDuration={700}
+              className="pageBottom"
+              imageSrc={Bar}
+              opacity={0.0}
+              parallaxOffset={100}
+              minHeight="45vw"
+              transitionDuration={700}
           />
           <div className="WoodenBottom-container">
             <img alt='' src={WoodenBottom} />
@@ -128,12 +128,12 @@ class About extends Component {
           </p>
           <ul className="grid">
             <li
-              className="small"
-              style={{ backgroundImage: `url(${Sandler})` }}
+                className="small"
+                style={{ backgroundImage: `url(${Sandler})` }}
             />
             <li
-              className="small"
-              style={{ backgroundImage: `url(${Smoove})` }}
+                className="small"
+                style={{ backgroundImage: `url(${Smoove})` }}
             />
           </ul>
         </div>

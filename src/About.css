@@ -28,7 +28,6 @@
   flex-basis: 45%;
 }
 
-/* also used in about */
 .Gallery-Blurb {
   display: flex;
   flex-direction: row;
@@ -54,10 +53,6 @@
 
 
 
-.about-section-container {
-  background-color: #D9CAB3
-}
-
 /*about page*/
 .About-Staff-container {
   display: flex;
@@ -81,8 +76,6 @@
 }
 
 .Staff-Card {
-  display: flex;
-  flex-direction: row;
   background-color: #d9cab3;
   border: 1px solid #60574a;
   box-shadow: 3px 3px 3px #635c52;
@@ -92,23 +85,70 @@
   border-radius: 10px;
 }
 
-.Staff-Card img {
-  padding: 15px;
+.Staff-Card h3 {
+  margin-bottom: 8px;
+}
+.Staff-Card h3 span {
+  padding: 1px 5px;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.Staff-Card div:first-child {
+  float: left;
+}
+
+.Staff-Card div:first-child div {
+  padding: 12px;
   height: 25vw;
   width: 20vw;
   border-radius: 7px;
   margin: 1vw;
   box-shadow: 3px 3px 6px grey;
+  background-size: cover;
 }
 
 .Staff-Card h2 {
+  display: block;
+  float: right;
+  width: 29vw;
+  text-align: left;
   margin: 1.25vw 0;
+  padding-left: 2vw;
+  white-space: nowrap;
 }
 
+
 .Staff-Card p {
-  width: 50%;
-  margin: 0.5vw auto;
+  margin: 0.5vw 5%;
 }
+
+@media( min-width: 860px ){
+  .Staff-Card h2 {
+    width: 32vw;
+    padding: 0;
+    text-align: center;
+  }
+
+  .Staff-Card p {
+    margin: 0.5vw 12% 0.5vw 50%;
+  }
+}
+
+@media( max-width: 560px ){
+  .Staff-Card h2 {
+    font-size: 0.875em;
+    padding: 0;
+    width: 27vw;
+  }
+
+  .Staff-Card h3 {
+    font-size: 1em;
+
+  }
+}
+
 
 
 .pageBottom > div:first-child {
