@@ -6,6 +6,7 @@
   border-right: none;
   border-left: none;
   border-top: none;
+  border-color: black;
 }
 
 .page {
@@ -16,11 +17,13 @@
 #name {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  border-color: black;
 }
 
 textarea {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  border-color: black;
 }
 
 .form-container {
@@ -103,6 +106,7 @@ contact-container input:hover {
   border-left: none;
   border-bottom: none;
   transition: all 0.3s ease-in-out;
+  border-color: black;
 }
 
 .contact-container textarea:hover {
