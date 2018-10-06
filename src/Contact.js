@@ -108,8 +108,14 @@ class Contact extends Component {
           </section>
           <div className="more-info-container">
             <div className="location">
-              <h2>Location</h2>
-              <p>20 Exodus Street, Netanya </p> <br />
+              <h2>Contact</h2>
+              <br />
+              <p>20 Exodus Street, Netanya </p>
+              <br />
+              <a href="mailto:MulligansSteakhouse@nycmail.com">
+                {" "}
+                <p>MulligansSteakhouse@nycmail.com </p>
+              </a>
             </div>
             <div className="map">
               <img src={map} />
