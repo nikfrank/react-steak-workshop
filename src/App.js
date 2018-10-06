@@ -147,7 +147,7 @@ class App extends Component {
 
           <footer>
             <ul>
-              <li>
+              <li className='app-footer-media-tags'>
                 <a href="/">
                   <img alt='' src={insta} className="social-square insta" />
                 </a>
