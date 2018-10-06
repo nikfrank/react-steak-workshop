@@ -80,6 +80,7 @@ footer {
   color: #fff;
   padding: 60px 20px;
 }
+
 footer ul {
   display: flex;
   flex-direction: row;
@@ -117,6 +118,6 @@ footer p a {
 
 @media (max-width: 600px) {
   footer ul li {
-    margin: 0 20px;
+    margin: 0 4px;
   }
 }

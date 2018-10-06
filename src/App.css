@@ -35,9 +35,7 @@ ul.grid {
 
 /*-------------
  	Header
--------------*/
-.navWrapper {
-}
+   -------------*/
 
 .header-background {
   display: flex;
@@ -83,6 +81,17 @@ header nav li:last-child {
 
 .pageTopper {
   display: flex;
+}
+
+@media( max-width: 600px ){
+  header {
+    padding: 2px;
+  }
+
+  header h2.homelogo-text {
+    padding: 8px;
+    font-size: 30px;
+  }
 }
 
 
