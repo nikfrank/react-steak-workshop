@@ -1,5 +1,11 @@
 import React, { Component } from "react";
+
 import "./App.css";
+import "./Global.css";
+
+import "./mobilenav.css";
+import "./rc-swipeout.css";
+
 import {
   Route,
   NavLink,
@@ -7,16 +13,19 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
+
 import Home from "./Home";
 import About from "./About";
 import Menu from "./Menu";
 import Contact from "./Contact";
-import woodHeader from "./imgs/woodHeader.jpg";
-import { HamburgerArrow } from "react-animated-burgers";
-import homelogo from "./imgs/homelogo.png";
-import "./mobilenav.css";
+
 import Swipeout from "rc-swipeout";
-import "./rc-swipeout.css";
+
+import { HamburgerArrow } from "react-animated-burgers";
+
+import woodHeader from "./imgs/woodHeader.jpg";
+import homelogo from "./imgs/homelogo.png";
+
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
 

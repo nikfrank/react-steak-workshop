@@ -9,7 +9,7 @@ import bbq from "./imgs/bbqBrisket.jpg";
 import porterhouse from "./imgs/porterhouse.jpg";
 import brisket from "./imgs/brisket.jpg";
 
-const Roaster = require("./imgs/skirtSteak.jpg");
+import Roaster from "./imgs/skirtSteak.jpg";
 
 class Home extends Component {
   render() {

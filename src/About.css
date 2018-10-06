@@ -1,3 +1,116 @@
+/* --------------------
+   Our Work Section
+   --------------------- */
+.spacer {
+  height: 5vw;
+}
+
+.grid li {
+  padding: 15px;
+  height: 350px;
+  width: 350px;
+  border-radius: 3px;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+}
+
+.grid li.large {
+  height: 500px;
+  width: 500px;
+}
+
+.grid li.small {
+  flex-basis: 30%;
+}
+.grid li.large {
+  flex-basis: 45%;
+}
+
+/* also used in about */
+.Gallery-Blurb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 65vw;
+  border-bottom: 1px solid #51504c;
+  margin: 0 auto;
+}
+.Gallery-Blurb p {
+  max-width: 60vw;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  .grid li.small,
+  .our-work .grid li.large {
+    flex-basis: 100%;
+  }
+}
+
+
+
 .about-section-container {
   background-color: #D9CAB3
+}
+
+/*about page*/
+.About-Staff-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #b2a693;
+}
+
+.Staff-Header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.Staff-Bios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Staff-Card {
+  display: flex;
+  flex-direction: row;
+  background-color: #d9cab3;
+  border: 1px solid #60574a;
+  box-shadow: 3px 3px 3px #635c52;
+  color: #60574a;
+  width: 55vw;
+  margin: 1.5vw;
+  border-radius: 10px;
+}
+
+.Staff-Card img {
+  padding: 15px;
+  height: 25vw;
+  width: 20vw;
+  border-radius: 7px;
+  margin: 1vw;
+  box-shadow: 3px 3px 6px grey;
+}
+
+.Staff-Card h2 {
+  margin: 1.25vw 0;
+}
+
+.Staff-Card p {
+  width: 50%;
+  margin: 0.5vw auto;
+}
+
+
+.pageBottom > div:first-child {
+  background-size: cover;
 }

@@ -3,8 +3,8 @@ import LazyHero from "react-lazy-hero";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
 
-//import './About.css';
-const Girls = require("./imgs/girls.jpg");
+import './Contact.css';
+import Girls from "./imgs/girls.jpg";
 
 class Contact2 extends Component {
   render() {
