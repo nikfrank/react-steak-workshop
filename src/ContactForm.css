@@ -241,11 +241,22 @@ contact-container input:hover {
   display: flex;
   flex-direction: row;
   width: 50%;
-  padding: 20px;
+
   margin-bottom: 20px;
+  padding-top: 50%;
+  background-size: cover;
 }
 
-.map img {
-  max-width: 100%;
-  height: auto;
+@media (max-width: 600px) {
+  .more-info-container {
+    flex-direction: column;
+  }
+  .map,
+  .parking,
+  .policy {
+    width: 80%;
+  }
+  .map {
+    background-position: 0 -60px;
+  }
 }

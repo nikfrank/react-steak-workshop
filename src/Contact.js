@@ -62,7 +62,7 @@ class Contact extends Component {
 
                 <div className="emailInvalid" />
 
-                <form id="form" class="topBefore">
+                <form id="form" className="topBefore">
                   <input
                     id="name"
                     type="text"
@@ -117,9 +117,7 @@ class Contact extends Component {
                 <p>MulligansSteakhouse@nycmail.com </p>
               </a>
             </div>
-            <div className="map">
-              <img src={map} />
-            </div>
+            <div className="map" style={{ backgroundImage: `url(${map})` }} />
             <div className="parking">
               <h3>Parking</h3>
               <br />
