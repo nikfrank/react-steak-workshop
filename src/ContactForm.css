@@ -217,3 +217,34 @@ contact-container input:hover {
 .textarea-wraper span {
   position: absolute;
 }
+
+.more-info-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.location,
+.parking,
+.policy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+}
+
+.map {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.map img {
+  max-width: 100%;
+  height: auto;
+}
