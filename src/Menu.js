@@ -153,13 +153,13 @@ class Menu extends Component {
                 <h1>{title}</h1>
                 {items.map(({ nameByLang, priceByCoin, imgSrc }, ii) => (
                   <div
-                    className="menu-item"
+                    className={"menu-item "+currentLang}
                     onClick={() => this.openFodal(pi, ii)}
                     key={nameByLang.en}
                   >
-                    {nameByLang[currentLang]}
-                    - {coinSymbols[coin]}
-                    {priceByCoin[coin]}
+                    <span>{nameByLang[currentLang]}</span>
+                    <span/>
+                    <span>{coinSymbols[coin]}{priceByCoin[coin]}</span>
                     {(pageIndex === pi && itemIndex === ii) ? (
                       <div
                         className={"fodal " + (closingFodal ? "closing" : "")}

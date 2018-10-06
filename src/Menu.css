@@ -58,7 +58,28 @@
 .Menu-page .menu-paper .menu-item {
   margin-bottom: 8px;
   cursor: zoom-in;
+
+  display: flex;
+  flex-direction: row;
 }
+
+.Menu-page .menu-paper .menu-item.he {
+  flex-direction: row-reverse;
+}
+
+
+.Menu-page .menu-paper .menu-item span:nth-child(2) {
+  flex-grow: 1;
+  height: 1.25em;
+  border-bottom: 2px dotted #60574a;
+  padding: 0 2px;
+}
+
+.Menu-page .menu-paper .menu-item {
+  padding: 0 10px;
+}
+
+
 
 .Menu-page h1 {
   font-size: 1.5em;
