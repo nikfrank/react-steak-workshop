@@ -28,7 +28,6 @@ html {
   color: #555;
 }
 
-
 hr {
   width: 150px;
   height: 2px;
@@ -77,9 +76,9 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
+  background-color: #414a4f;
   color: #fff;
-  padding: 60px 0;
+  padding: 60px 20px;
 }
 footer ul {
   display: flex;
@@ -114,4 +113,10 @@ footer p {
 
 footer p a {
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  footer ul li {
+    margin: 0 20px;
+  }
 }
