@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./ContactForm.css";
+import "./ContactForm.scss";
 import Textarea from "./Textarea";
 import Correct from "./imgs/correct.svg";
 import X from "./imgs/delete-button.svg";

@@ -3,7 +3,7 @@ import LazyHero from "react-lazy-hero";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
 
-import './Contact.css';
+import './Contact.scss';
 import Girls from "./imgs/girls.jpg";
 
 class Contact2 extends Component {

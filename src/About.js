@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './About.css';
+import './About.scss';
 
 import LazyHero from "react-lazy-hero";
 import WoodenBottom from "./imgs/woodBottom.jpg";

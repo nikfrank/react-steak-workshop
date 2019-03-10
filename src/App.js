@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import "./App.css";
-import "./Global.css";
+import "./App.scss";
+import "./Global.scss";
 
-import "./mobilenav.css";
-import "./rc-swipeout.css";
+import "./mobilenav.scss";
+import "./rc-swipeout.scss";
 
 import {
   Route,

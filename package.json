@@ -1,9 +1,10 @@
 {
-  "name": "flex-boil",
+  "name": "steak-workshop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "capsloklogo": "^1.0.3",
+    "node-sass": "^4.11.0",
     "pushstate-server": "^3.0.1",
     "rc-swipeout": "^2.0.11",
     "react": "^16.4.2",
@@ -11,7 +12,7 @@
     "react-dom": "^16.4.2",
     "react-lazy-hero": "^0.4.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "^2.1.8",
     "textarea": "^0.3.0"
   },
   "scripts": {
@@ -24,5 +25,11 @@
     "mid-deploy": "sed -i /build/d ./.gitignore && git add . && git commit -am deploy",
     "finish-deploy": "git push origin deploy --force && git checkout master",
     "server": "pushstate-server ./build"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

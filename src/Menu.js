@@ -12,7 +12,7 @@ import lagavulin from "./imgs/lagavulin.jpg";
 
 import oldPaper from "./imgs/old-paper.png";
 
-import "./Menu.css";
+import "./Menu.scss";
 
 const coinByLang = { en: "USD", he: "ILS" };
 const coinSymbols = { USD: "$", ILS: "₪" };
