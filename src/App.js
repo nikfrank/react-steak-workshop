@@ -44,99 +44,13 @@ class App extends Component {
 
   
   render() {
+    const { sideMenuVisible } = this.state;
 
     return (
       <Router>
         <div className="App">
           <div className="navWrapper navMobile">
-            <header>
-              <div className="header-mobile-container">
-                <h2 className="homelogo-text">
-                  <NavLink to="/home">Mulligans</NavLink>
-                </h2>
-
-                <div
-                  className="hamburger-button-wrapper"
-                  onClick={this.setMobileMenu}
-                >
-                  <HamburgerArrow
-                    isActive={this.state.sideMenuVisible}
-                    toggleButton={this.setMobileMenu}
-                    barColor="white"
-                  />
-                </div>
-
-                <div
-                  className={
-                    "side-nav " +
-                      (this.state.sideMenuVisible
-                     ? "side-nav-does-show"
-                     : "side-nav-does-not-show")
-                  }
-                >
-                  <ul>
-                    <li>
-                      <NavLink to="/home">
-                        <div>Home</div>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/about">
-                        <div>About</div>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/menu">
-                        <div>Menu</div>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/contact">
-                        <div>Contact</div>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/home">
-                        <img alt='' src={homelogo} />
-                      </NavLink>
-                    </li>
-                  </ul>
-                  <Swipeout
-                    left={[
-                      {
-                        text: "reply",
-                        onPress: this.setMobileMenu,
-                        style: { backgroundColor: "orange", color: "white" },
-                        className: "custom-class-1"
-                      }
-                    ]}
-                    onOpen={this.setMobileMenu}
-                  >
-                    <div
-                      className="side-nav-shade"
-                      onClick={this.setMobileMenu}
-                    />
-                  </Swipeout>
-                </div>
-              </div>
-
-              <div className="nav-regular">
-                <nav>
-                  <li>
-                    <NavLink to="/home">Home</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/about">About</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/menu">Menu</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/contact">Contact</NavLink>
-                  </li>
-                </nav>
-              </div>
-            </header>
+            <NavBar onToggle={this.setMobileMenu} open={sideMenuVisible}/>
           </div>
 
           <div className="header-background">
