@@ -8,10 +8,12 @@
   box-sizing: border-box;
 }
 
-html {
-  font: normal 16px sans-serif;
-  color: #555;
+h1 {
+  font-family: "Limelight";
+  font-size: 10vw;
+  color: #60574a;
 }
+
 
 ul,
 nav {
@@ -93,6 +95,7 @@ ul.grid {
 /*-------------
  	Header
 -------------*/
+
 
 header {
   position: absolute;
@@ -364,24 +367,45 @@ header nav li:last-child {
   }
 }
 
-/*-------------
- 	Footer
--------------*/
+
+
+html {
+  font-family: "Oswald";
+  font: "Oswald" 16px sans-serif;
+  color: #555;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #414a4f;
+  color: #fff;
+  padding: 60px 20px;
+}
 
 footer ul {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 25px;
   font-size: 32px;
 }
 
-footer ul li {
-  margin: 0 8px;
+footer ul li img {
+  height: 50px;
+  width: 50px;
+  margin: 0;
 }
 
+footer ul li {
+  margin: 0 60px;
+}
 footer ul li:first-child {
   margin-left: 0;
 }
-
 footer ul li:last-child {
   margin-right: 0;
 }
@@ -397,16 +421,14 @@ footer p a {
   color: #fff;
 }
 
-@media (max-width: 700px) {
-  footer {
-    padding: 80px 15px;
+@media (max-width: 600px) {
+  footer ul li {
+    margin: 0 4px;
   }
 }
 
-/* -- Demo ads -- */
-
-@media (max-width: 1200px) {
-  #bsaHolder {
-    display: none;
+@media (max-width: 700px) {
+  footer {
+    padding: 80px 15px;
   }
 }
