@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import "./ContactForm.scss";
-import Textarea from "./Textarea";
+
+import CountTextarea from "./CountTextarea";
+import LazyHero from "react-lazy-hero";
+
 import Correct from "./imgs/correct.svg";
 import X from "./imgs/delete-button.svg";
 import contactWood from "./imgs/woodFloor3.jpg";
-
-import LazyHero from "react-lazy-hero";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
-
 import Girls from "./imgs/girls.jpg";
-import map from "./imgs/map.png";
+
+import "./Contact.scss";
+
 class Contact extends Component {
   state = {
     userName: "",
@@ -89,7 +90,7 @@ class Contact extends Component {
                   </div>
 
                   <div className="contact-message-div">
-                    <Textarea
+                    <CountTextarea
                       id="message"
                       type="text"
                       onChange={this.setMessage}
@@ -106,52 +107,6 @@ class Contact extends Component {
               </div>
             </div>
           </section>
-          <div className="more-info-container">
-            <div className="location">
-              <h2>Contact</h2>
-              <br />
-              <p>20 Exodus Street, Netanya </p>
-              <br />
-              <a href="mailto:MulligansSteakhouse@nycmail.com">
-                {" "}
-                <p>MulligansSteakhouse@nycmail.com </p>
-              </a>
-            </div>
-            <div className="map" style={{ backgroundImage: `url(${map})` }} />
-            <div className="parking">
-              <h3>Parking</h3>
-              <br />
-              <p>
-                <strong>Street Parking</strong> is available in a parking lot
-                next door.{" "}
-              </p>
-              <br />
-              <p>
-                {" "}
-                <strong> Valet parking </strong> is available on site for 20nis
-                per car with restaurant validation.
-              </p>{" "}
-              <br />
-              <p> We promise not to go Bueller with your Ferrari.</p>
-            </div>
-            <div className="policy">
-              <h3>Reservation Policies</h3>
-              <br />
-              <p>Reservations will be held for 15 minutes.</p>
-              <br />
-              <p>
-                After 15 minutes we will do our best to accommodate you, but
-                will not be able to guarantee a table.
-              </p>
-              <br />
-              <p>
-                We accept online and phone reservations. If the reservation time
-                you are looking for is not available, please feel free to join
-                us at bar. We keep the bar available for walk-ins and it is
-                first come first serve.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     );

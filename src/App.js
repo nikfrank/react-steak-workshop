@@ -1,36 +1,24 @@
 import React, { Component } from "react";
 
 import "./App.scss";
-import "./Global.scss";
-
-import "./mobilenav.scss";
-import "./rc-swipeout.scss";
 
 import {
   Route,
-  NavLink,
   BrowserRouter as Router,
   Switch,
   Redirect
 } from "react-router-dom";
 
 import Home from "./Home";
-import About from "./About";
 import Menu from "./Menu";
 import Contact from "./Contact";
-
-import Swipeout from "rc-swipeout";
-
-import { HamburgerArrow } from "react-animated-burgers";
+import NavBar from './NavBar';
 
 import woodHeader from "./imgs/woodHeader.jpg";
-import homelogo from "./imgs/homelogo.png";
 
 import insta from "./imgs/insta.svg";
 import facebook from "./imgs/facebook.svg";
 
-//import { Logo } from 'capsloklogo';
-//import cursiveLogo from 'capsloklogo/dist/CapsSquare-cursive.svg';
 import { Cursive } from 'capsloklogo';
 
 class App extends Component {
@@ -60,7 +48,6 @@ class App extends Component {
           <div>
             <Switch>
               <Route exact path="/home" component={Home} />
-              <Route exact path="/about" component={About} />
               <Route exact path="/menu" component={Menu} />
 
               <Route exact path="/contact" component={Contact} />

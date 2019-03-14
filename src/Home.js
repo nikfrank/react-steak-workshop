@@ -8,13 +8,14 @@ import flame from "./imgs/flameSteak.jpg";
 import bbq from "./imgs/bbqBrisket.jpg";
 import porterhouse from "./imgs/porterhouse.jpg";
 import brisket from "./imgs/brisket.jpg";
-
 import Roaster from "./imgs/skirtSteak.jpg";
+
+import About from './About';
 
 class Home extends Component {
   render() {
-    return (
-      <div>
+    return [
+      <div key='home'>
         <LazyHero
           className="pageTopper"
           imageSrc={Roaster}
@@ -62,7 +63,7 @@ class Home extends Component {
             </p>
           </div>
         </div>
-        <section className="contact">
+        <section className="contact" style={{ backgroundColor: '#b2a693' }}>
           <h3 className="title">Mulligans</h3>
           <p>Come sit for a while.</p>
           <br />
@@ -78,8 +79,9 @@ class Home extends Component {
             />
           </ul>
         </section>
-      </div>
-    );
+      </div>,
+      <About key='about'/>
+    ];
   }
 }
 export default Home;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './About.scss';
 
-import LazyHero from "react-lazy-hero";
 import WoodenBottom from "./imgs/woodBottom.jpg";
 import brass from "./imgs/brassFix.jpg";
 import asian from "./imgs/asianCheg.jpg";
@@ -9,41 +8,32 @@ import moFire from "./imgs/moFire.jpg";
 import Amanda from "./imgs/amanda.jpg";
 import Stacey from "./imgs/hostess.jpg";
 import Sandler from "./imgs/sandlerFix.jpg";
-import Bar from "./imgs/bar2.jpg";
 import Smoove from "./imgs/Smoove2.jpg";
-
-import Rib from "./imgs/hawksmoor.png";
+import map from "./imgs/map.png";
 
 class About extends Component {
   render() {
     return (
       <div>
-        <LazyHero
-            className="pageTopper"
-            imageSrc={Rib}
-            opacity={0.0}
-            parallaxOffset={100}
-            minHeight="25vw"
-            transitionDuration={700}
-        />
-
         <div style={{ backgroundColor: "#D9CAB3" }}>
+          
           <div className="WoodenBottom-container">
             <img alt='' src={WoodenBottom} />
             <img alt='' src={brass} className="home-brass" />
           </div>
-
-          <div className="spacer" />
-
-          <h1>Mulligans Steakhouse</h1>
+          
+          <div className="Staff-Header">
+            <h2>Our staff</h2>
+          </div>
+          
           <ul className="grid">
             <li
-                className="small"
-                style={{ backgroundImage: `url(${asian})` }}
+              className="small"
+              style={{ backgroundImage: `url(${asian})` }}
             />
             <li
-                className="small"
-                style={{ backgroundImage: `url(${moFire})` }}
+              className="small"
+              style={{ backgroundImage: `url(${moFire})` }}
             />
           </ul>
           <div className="Gallery-Blurb">
@@ -63,11 +53,6 @@ class About extends Component {
           </div>
         </div>
         <div className="About-Staff-container">
-          <br />
-          <div className="Staff-Header">
-            <h2>Our staff</h2>
-          </div>
-
           <div className="Staff-Bios">
             <div className="Staff-Card">
               <div>
@@ -107,15 +92,8 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <div>
-          <LazyHero
-              className="pageBottom"
-              imageSrc={Bar}
-              opacity={0.0}
-              parallaxOffset={100}
-              minHeight="45vw"
-              transitionDuration={700}
-          />
+        
+        <div className='celebs'>
           <div className="WoodenBottom-container">
             <img alt='' src={WoodenBottom} />
             <img alt='' src={brass} className="home-brass" />
@@ -128,15 +106,63 @@ class About extends Component {
           </p>
           <ul className="grid">
             <li
-                className="small"
-                style={{ backgroundImage: `url(${Sandler})` }}
+              className="small"
+              style={{ backgroundImage: `url(${Sandler})` }}
             />
             <li
-                className="small"
-                style={{ backgroundImage: `url(${Smoove})` }}
+              className="small"
+              style={{ backgroundImage: `url(${Smoove})` }}
             />
           </ul>
         </div>
+
+        <div className="more-info-container">
+          <div className="location">
+            <h2>Contact</h2>
+            <br />
+            <p>20 Exodus Street, Netanya </p>
+            <br />
+            <a href="mailto:MulligansSteakhouse@nycmail.com">
+              {" "}
+              <p>MulligansSteakhouse@nycmail.com </p>
+            </a>
+          </div>
+          <div className="map" style={{ backgroundImage: `url(${map})` }} />
+          <div className="parking">
+            <h3>Parking</h3>
+            <br />
+            <p>
+              <strong>Street Parking</strong> is available in a parking lot
+              next door.{" "}
+            </p>
+            <br />
+            <p>
+              {" "}
+              <strong> Valet parking </strong> is available on site for 20nis
+              per car with restaurant validation.
+            </p>{" "}
+            <br />
+            <p> We promise not to go Bueller with your Ferrari.</p>
+          </div>
+          <div className="policy">
+            <h3>Reservation Policies</h3>
+            <br />
+            <p>Reservations will be held for 15 minutes.</p>
+            <br />
+            <p>
+              After 15 minutes we will do our best to accommodate you, but
+              will not be able to guarantee a table.
+            </p>
+            <br />
+            <p>
+              We accept online and phone reservations. If the reservation time
+              you are looking for is not available, please feel free to join
+              us at bar. We keep the bar available for walk-ins and it is
+              first come first serve.
+            </p>
+          </div>
+        </div>
+
       </div>
     );
   }
