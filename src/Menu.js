@@ -110,6 +110,7 @@ class Menu extends Component {
           (state.langs.indexOf(state.currentLang) + 1) % state.langs.length
         ]
     }));
+  
   render() {
     const {
       pages,

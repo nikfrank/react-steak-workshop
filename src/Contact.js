@@ -35,7 +35,7 @@ class Contact extends Component {
     const { userName, email, message } = this.state;
 
     return (
-      <div>
+      <div className='Contact-Page'>
         <LazyHero
           className="pageTopper"
           imageSrc={Girls}
@@ -45,7 +45,7 @@ class Contact extends Component {
           transitionDuration={700}
         />
 
-        <div style={{ backgroundColor: "#D9CAB3" }}>
+        <div className="contact-header">
           <div className="WoodenBottom-container">
             <img alt="" src={WoodenBottom} />
             <img alt="" src={brass} className="home-brass" />
@@ -54,7 +54,7 @@ class Contact extends Component {
           <div className="spacer" />
 
           <section className="contact-section-tag">
-            <div className="page contact-container">
+            <div className="contact-container">
               <div
                 className="form-container"
                 style={{ backgroundImage: `url(${contactWood})` }}
@@ -63,9 +63,9 @@ class Contact extends Component {
 
                 <div className="emailInvalid" />
 
-                <form id="form" className="topBefore">
+                <form className="contact-form">
                   <input
-                    id="name"
+                    className="name-input"
                     type="text"
                     placeholder="NAME"
                     onChange={this.setUserName}
@@ -98,7 +98,7 @@ class Contact extends Component {
                     />
                   </div>
                   <input
-                    id="submit"
+                    className="contact-submit"
                     type="submit"
                     value="SUBMIT"
                     onChange={this.setSubmit}
