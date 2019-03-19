@@ -131,14 +131,14 @@ export default ()=> (
         <br />
         <p>
           <strong>Street Parking</strong> is available in a parking lot
-          next door.{" "}
+          next door.
         </p>
         <br />
         <p>
-          {" "}
+          
           <strong> Valet parking </strong> is available on site for 20nis
           per car with restaurant validation.
-        </p>{" "}
+        </p>
         <br />
         <p> We promise not to go Bueller with your Ferrari.</p>
       </div>
