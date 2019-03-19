@@ -78,15 +78,15 @@ class Menu extends Component {
       }
     ],
 
-    pageIndex: null,
-    itemIndex: null,
+    selectedPageIndex: null,
+    selectedItemIndex: null,
     closingFodal: false,
 
     currentLang: "en",
     langs: ["en", "he"]
   };
 
-  openFodal = (pageIndex, itemIndex) => this.setState({ pageIndex, itemIndex });
+  openFodal = (selectedPageIndex, selectedItemIndex) => this.setState({ selectedPageIndex, selectedItemIndex });
 
   closeFodal = e => {
     e.stopPropagation();
@@ -95,8 +95,8 @@ class Menu extends Component {
     setTimeout(
       () =>
         this.setState({
-          pageIndex: null,
-          itemIndex: null,
+          selectedPageIndex: null,
+          selectedItemIndex: null,
           closingFodal: false
         }),
       700
